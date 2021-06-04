@@ -1,11 +1,11 @@
-# SysProxy [![Build Status](https://github.com/httptoolkit/sysproxy/workflows/CI/badge.svg)](https://github.com/httptoolkit/sysproxy/actions) [![Available on NPM](https://img.shields.io/npm/v/sysproxy.svg)](https://npmjs.com/package/sysproxy)
+# OS-Proxy-Config [![Build Status](https://github.com/httptoolkit/os-proxy-config/workflows/CI/badge.svg)](https://github.com/httptoolkit/os-proxy-config/actions) [![Available on NPM](https://img.shields.io/npm/v/os-proxy-config.svg)](https://npmjs.com/package/os-proxy-config)
 
 > _Part of [HTTP Toolkit](https://httptoolkit.tech): powerful tools for building, testing & debugging HTTP(S)_
 
-Access the configured system proxy settings from Node.js, for all platforms. Use it like so:
+Access the operating system proxy configuration from Node.js, for all platforms. Use it like so:
 
 ```javascript
-import { getSystemProxy } from 'sysproxy';
+import { getSystemProxy } from 'os-proxy-config';
 
 const proxy = await getSystemProxy();
 ```

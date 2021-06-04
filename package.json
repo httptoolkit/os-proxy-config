@@ -1,7 +1,7 @@
 {
-  "name": "sysproxy",
+  "name": "os-proxy-config",
   "version": "1.0.0",
-  "description": " Access the configured system proxy settings from Node.js, for all platforms",
+  "description": "Access the operating system proxy configuration from Node.js, for all platforms",
   "main": "dist/index.js",
   "files": [
     "dist",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/httptoolkit/sysproxy.git"
+    "url": "git+https://github.com/httptoolkit/os-proxy-config.git"
   },
   "keywords": [
     "mac",
@@ -25,6 +25,7 @@
     "proxy",
     "proxies",
     "pac",
+    "http",
     "socks",
     "config",
     "configuration"
@@ -32,9 +33,9 @@
   "author": "Tim Perry <tim@httptoolkit.tech>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/httptoolkit/sysproxy/issues"
+    "url": "https://github.com/httptoolkit/os-proxy-config/issues"
   },
-  "homepage": "https://github.com/httptoolkit/sysproxy#readme",
+  "homepage": "https://github.com/httptoolkit/os-proxy-config#readme",
   "devDependencies": {
     "@types/chai": "^4.2.18",
     "@types/mocha": "^8.2.2",
