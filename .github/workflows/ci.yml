@@ -1,0 +1,22 @@
+name: CI
+on: push
+jobs:
+  build:
+    name: Build & test
+
+    strategy:
+      matrix:
+        node-version: [12.x, v14.17.0, 14.x, 16.x, '*']
+        os: ["macos-10.15", "ubuntu-20.04", "windows-2019"]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: npm install --no-package-lock
+      - run: npm test
