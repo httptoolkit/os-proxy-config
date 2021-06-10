@@ -1,4 +1,4 @@
-import getWindowsProxy = require('@cypress/get-windows-proxy');
+import { getWindowsSystemProxy } from 'windows-system-proxy';
 import { getMacSystemProxy } from 'mac-system-proxy';
 
 export interface ProxyConfig {
@@ -21,14 +21,7 @@ export interface ProxyConfig {
 
 export async function getSystemProxy(): Promise<ProxyConfig | undefined> {
     if (process.platform === 'win32') {
-        const proxySettings = getWindowsProxy();
-        if (!proxySettings || !proxySettings.httpProxy) return undefined;
-        else return {
-            proxyUrl: proxySettings.httpProxy,
-            noProxy: proxySettings.noProxy
-                ? proxySettings.noProxy.split(',')
-                : []
-        };
+        return getWindowsSystemProxy();
     } else if (process.platform === 'darwin') {
         const proxySettings = await getMacSystemProxy();
 

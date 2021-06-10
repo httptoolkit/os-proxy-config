@@ -47,7 +47,7 @@
     "typescript": "^4.3.2"
   },
   "dependencies": {
-    "@cypress/get-windows-proxy": "^1.6.2",
-    "mac-system-proxy": "^1.0.0"
+    "mac-system-proxy": "^1.0.0",
+    "windows-system-proxy": "^1.0.0"
   }
 }
