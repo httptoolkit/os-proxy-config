@@ -25,7 +25,7 @@ If there's no proxy configured, it will resolve to `undefined` instead. If somet
 
 This works slightly differently on each platform:
 
-* On Windows it uses [@cypress/get-windows-proxy](https://www.npmjs.com/package/@cypress/get-windows-proxy), which reads proxy configuration from the registry using [registry-js](https://www.npmjs.com/package/registry-js).
+* On Windows it uses [windows-system-proxy](https://www.npmjs.com/package/windows-system-proxy), which reads proxy configuration from the registry using [registry-js](https://www.npmjs.com/package/registry-js).
 * On Mac it uses [mac-system-proxy](https://github.com/httptoolkit/mac-system-proxy), which reads proxy configuration using the `scutil` command-line tool.
 * On Linux it parses the various *_PROXY environment variables.
 
