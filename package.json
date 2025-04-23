@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/chai": "^4.2.18",
     "@types/mocha": "^8.2.2",
-    "@types/node": "^15.9.0",
+    "@types/node": "^22.14.1",
     "chai": "^4.3.4",
     "cross-env": "^7.0.3",
     "mocha": "^8.4.0",
