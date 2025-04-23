@@ -39,7 +39,7 @@ export async function getSystemProxy(): Promise<ProxyConfig | undefined> {
             };
         } else if (proxySettings.HTTPSEnable && proxySettings.HTTPSProxy && proxySettings.HTTPSPort) {
             return {
-                proxyUrl: `https://${proxySettings.HTTPSProxy}:${proxySettings.HTTPSPort}`,
+                proxyUrl: `http://${proxySettings.HTTPSProxy}:${proxySettings.HTTPSPort}`,
                 noProxy
             };
         } else {
