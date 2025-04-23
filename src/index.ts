@@ -27,12 +27,7 @@ export async function getSystemProxy(): Promise<ProxyConfig | undefined> {
 
         const noProxy = proxySettings.ExceptionsList || [];
 
-        if (proxySettings.HTTPSEnable && proxySettings.HTTPSProxy && proxySettings.HTTPSPort) {
-            return {
-                proxyUrl: `https://${proxySettings.HTTPSProxy}:${proxySettings.HTTPSPort}`,
-                noProxy
-            };
-        } else if (proxySettings.HTTPEnable && proxySettings.HTTPProxy && proxySettings.HTTPPort) {
+        if (proxySettings.HTTPEnable && proxySettings.HTTPProxy && proxySettings.HTTPPort) {
             return {
                 proxyUrl: `http://${proxySettings.HTTPProxy}:${proxySettings.HTTPPort}`,
                 noProxy
@@ -40,6 +35,11 @@ export async function getSystemProxy(): Promise<ProxyConfig | undefined> {
         } else if (proxySettings.SOCKSEnable && proxySettings.SOCKSProxy && proxySettings.SOCKSPort) {
             return {
                 proxyUrl: `socks://${proxySettings.SOCKSProxy}:${proxySettings.SOCKSPort}`,
+                noProxy
+            };
+        } else if (proxySettings.HTTPSEnable && proxySettings.HTTPSProxy && proxySettings.HTTPSPort) {
+            return {
+                proxyUrl: `https://${proxySettings.HTTPSProxy}:${proxySettings.HTTPSPort}`,
                 noProxy
             };
         } else {
